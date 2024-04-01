@@ -16,18 +16,18 @@ Platform independent.
 3. `cd SIT.Docker`
 4. Build the server 
 	
-   Equivalent to release SITCoop-1.6.2-WithAki-3.8.0-92ab6c (0.14.1.3.29351):
+   Equivalent to release SITCoop-1.6.4-WithAki-3.8.0-2dd4d9 (0.14.1.3.29351):
    ```bash
    docker build \
       --no-cache \
-      --build-arg SIT=4bb11454c3b430971f249106ca7363f675e152bf \
-      --build-arg SPT=92ab6ceda8c30047a8019d8c743024d332b3309c \
+      --build-arg SIT=26b9c364963ba49de71d5761bed1135ddad50f77  \
+      --build-arg SPT=2dd4d914382657378d9cdec173039d771fe33220 \
       --label SITCoop \
       -t sitcoop .
    ```
    Same, but in one line:
    ```bash
-   docker build --no-cache --build-arg SIT=4bb11454c3b430971f249106ca7363f675e152bf --build-arg SPT=92ab6ceda8c30047a8019d8c743024d332b3309c --label SITCoop -t sitcoop .
+   docker build --no-cache --build-arg SIT=26b9c364963ba49de71d5761bed1135ddad50f77 --build-arg SPT=2dd4d914382657378d9cdec173039d771fe33220 --label SITCoop -t sitcoop .
    ```
    
    > Windows dont handle the \\, use the oneliner!
