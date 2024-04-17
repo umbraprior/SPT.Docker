@@ -31,10 +31,6 @@ RUN \. $HOME/.nvm/nvm.sh && npm install && npm run build:release -- --arch=$([ "
 RUN mv build/ /opt/server/
 WORKDIR /opt
 RUN rm -rf srv/
-## Grab SIT Coop Server Mod or continue if it exist
-RUN git clone --branch $SIT_BRANCH https://github.com/stayintarkov/SIT.Aki-Server-Mod.git ./server/user/mods/SITCoop 
-RUN cd ./server/user/mods/SITCoop && git checkout $SIT || true 
-RUN rm -rf ./server/user/mods/SITCoop/.git
 
 FROM ubuntu:latest
 WORKDIR /opt/
