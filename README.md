@@ -1,10 +1,12 @@
 <div align=center style="text-align: center;">
-<h1>Stay in Tarkov - Dockerized</h1>
+<h1>SPT-Aki - Dockerized</h1>
 <h2>Quickly set up your personal Escape from Tarkov server in just 5 minutes..</h2>
 <h2>The Linux Container, that builds the server too</h2>
 <h4>Why? Because everyone should be able to build, and not rely on unknown builds from unknown sources.</h3>
 
 Platform independent.
+
+This fork simply removes the SIT(stayintarkov) requirements to make a generic SPT-Aki server. Huge thanks to devbence/bullet for the original project.
 </div>
 
 ---
