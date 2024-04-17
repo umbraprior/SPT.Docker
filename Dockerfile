@@ -3,8 +3,6 @@
 ##
 
 FROM ubuntu:latest AS builder
-ARG SIT=-
-ARG SIT_BRANCH=master
 ARG SPT=-
 ARG SPT_BRANCH=3.8.0
 ARG NODE=20.11.1
