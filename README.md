@@ -16,7 +16,20 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 1. Install [DOCKER](https://docs.docker.com/engine/install/)
 2. `git clone https://github.com/umbraprior/SPT.Docker`
 3. `cd SPT.Docker`
-4. Build the server 
+4. Build the server
+
+   Equivalent to release SPT-Aki-3.8.1-e8e317 (0.14.1.2.29197):
+   ```bash
+   docker build \
+      --no-cache \
+      --build-arg SPT=79a5d32cb276e18a5b4405e1f7823cda4fe8e317 \
+      --label SPTAki \
+      -t sptaki .
+   ```
+   Same, but in one line:
+   ```bash
+   docker build --no-cache --build-arg SPT=79a5d32cb276e18a5b4405e1f7823cda4fe8e317 --label SPTAki -t sptaki .
+   ```
 	
    Equivalent to release SPT-Aki-3.8.0-3951e2 (0.14.1.2.29197):
    ```bash
@@ -34,7 +47,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    > Windows dont handle the \\, use the oneliner!
 
 
-5. Run the image once:
+7. Run the image once:
    ```bash
    docker run --pull=never -v $PWD/server:/opt/server -p 6969:6969 -p 6970:6970 -p 6971:6971 -p 6972:6972 -it --name sptaki sptaki
    ```
@@ -45,12 +58,12 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    docker run --pull=never --user $(id -u):$(id -g) -v $PWD/server:/opt/server -p 6969:6969 -p 6970:6970 -it --name sptaki sptaki
    ```
 
-6. Go to your `./server` directory, delete `delete_me`, and optionally install additional mods, make config changes, etc.
+8. Go to your `./server` directory, delete `delete_me`, and optionally install additional mods, make config changes, etc.
     > Using `-p6969:6969`, you expose the port to `0.0.0.0` (meaning: open for LAN, localhost, VPN address, etc).
     > 
     > You can specify `-p 192.168.12.34:6969:6969` for each port if you don't want the ports to listen on all interfaces. 
    
-7. Start your server (and enable auto restart):
+9. Start your server (and enable auto restart):
  ```bash
 docker start sptaki
 docker update --restart unless-stopped sptaki
