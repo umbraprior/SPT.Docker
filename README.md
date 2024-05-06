@@ -16,7 +16,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 1. Install [DOCKER](https://docs.docker.com/engine/install/)
 2. `git clone https://github.com/umbraprior/SPT.Docker`
 3. `cd SPT.Docker`
-4. Build the server
+4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the Aki server Gitea page
 
    Equivalent to release SPT-Aki-3.8.1-e8e317 (0.14.1.2.29197):
    ```bash
