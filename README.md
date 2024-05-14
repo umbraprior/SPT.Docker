@@ -16,7 +16,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 1. Install [DOCKER](https://docs.docker.com/engine/install/)
 2. `git clone https://github.com/umbraprior/SPT.Docker`
 3. `cd SPT.Docker`
-4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the Aki server Gitea page)
+4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the [SPT-Aki/Server Gitea Page](https://dev.sp-tarkov.com/SPT-AKI/Server))
 
 > [!CAUTION]
 > Windows doesn't handle the \\, use the oneliner!
@@ -53,7 +53,8 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    ```bash
    docker run --pull=never -v $PWD/server:/opt/server -p 6969:6969 -p 6970:6970 -p 6971:6971 -p 6972:6972 -it --name sptaki sptaki
    ```
-   - ⚠️ If you don't set the -v (volume), you won't be able to do a required step!
+   > [!IMPORTANT]
+   > If you don't set the -v (volume), you won't be able to do a required step!
 
    - On **Linux** you can include `--user $(id -u):$(id -g)`, this way, file ownership will be set to the user who started the container.
    ```bash
@@ -73,4 +74,7 @@ docker update --restart unless-stopped sptaki
 8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969`
 
 ## Bugs and Issues
+> [!NOTE]
+> Unraid seems to build the server in a separate, unlabeled image. This will use ~10G of Docker vDisk and will not be automatically removed. Remove the unlabeled image after first run.
+
 Let me know if there are any. Feel free to submit a PR.
