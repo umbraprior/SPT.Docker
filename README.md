@@ -66,7 +66,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
     > You can specify `-p 192.168.12.34:6969:6969` for each port if you don't want the ports to listen on all interfaces. 
    
 7. Start your server (and enable auto restart):
-    ```bash
+   ```bash
    docker start sptaki
    docker update --restart unless-stopped sptaki
    ```
