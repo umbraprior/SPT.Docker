@@ -18,8 +18,8 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 3. `cd SPT.Docker`
 4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the [SPT-Aki/Server Gitea Page](https://dev.sp-tarkov.com/SPT-AKI/Server))
 
-   > [!CAUTION]
-   > Windows doesn't handle the \\, use the oneliner!
+> [!CAUTION]
+> Windows doesn't handle the \\, use the oneliner!
 
    Equivalent to release SPT-Aki-3.8.3-01783e2 (0.14.1.2.29197):
    ```bash
