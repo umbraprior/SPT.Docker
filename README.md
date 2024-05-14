@@ -18,6 +18,9 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 3. `cd SPT.Docker`
 4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the Aki server Gitea page)
 
+> [!CAUTION]
+> Windows doesn't handle the \\, use the oneliner!
+
    Equivalent to release SPT-Aki-3.8.3-01783e2 (0.14.1.2.29197):
    ```bash
    docker build \
@@ -44,8 +47,6 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    ```bash
    docker build --no-cache --build-arg SPT=3951e29a340e917d158ec061ee671c4ae0f9c8ec --label SPTAki -t sptaki .
    ```
-   
-   > Windows doesn't handle the \\, use the oneliner!
 
 
 7. Run the image once:
