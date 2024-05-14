@@ -70,7 +70,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    docker start sptaki
    docker update --restart unless-stopped sptaki
    ```
-8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969`
+8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969` in Aki.Launcher
 
 ## Bugs and Issues
 > [!NOTE]
