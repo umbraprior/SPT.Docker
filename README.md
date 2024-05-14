@@ -18,8 +18,8 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 3. `cd SPT.Docker`
 4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the [SPT-Aki/Server Gitea Page](https://dev.sp-tarkov.com/SPT-AKI/Server))
 
-> [!CAUTION]
-> Windows doesn't handle the \\, use the oneliner!
+   > [!CAUTION]
+   > Windows doesn't handle the \\, use the oneliner!
 
    Equivalent to release SPT-Aki-3.8.3-01783e2 (0.14.1.2.29197):
    ```bash
@@ -67,10 +67,10 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
     > You can specify `-p 192.168.12.34:6969:6969` for each port if you don't want the ports to listen on all interfaces. 
    
 9. Start your server (and enable auto restart):
- ```bash
-docker start sptaki
-docker update --restart unless-stopped sptaki
-```
+    ```bash
+   docker start sptaki
+   docker update --restart unless-stopped sptaki
+   ```
 8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969`
 
 ## Bugs and Issues
