@@ -53,9 +53,9 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    ```
    
    - ⚠️ If you don't set the -v (volume), you won't be able to do a required step!
-     
+   
    - On **Linux** you can include `--user $(id -u):$(id -g)`, this way, file ownership will be set to the user who started the container.
-     
+   
    ```bash
    docker run --pull=never --user $(id -u):$(id -g) -v $PWD/server:/opt/server -p 6969:6969 -p 6970:6970 -it --name sptaki sptaki
    ```
