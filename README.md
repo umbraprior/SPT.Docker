@@ -22,13 +22,13 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    ```bash
    docker build \
       --no-cache \
-      --build-arg SPT=645adcfd49dc2889ec6bf320730523ddb5f6821a \
+      --build-arg SPT=4492882bba506f5751a1f600f3ae60275ad27e64 \
       --label SPTAki \
       -t sptaki .
    ```
    Same, but in one line:
    ```bash
-   docker build --no-cache --build-arg SPT=645adcfd49dc2889ec6bf320730523ddb5f6821a --label SPTAki -t sptaki .
+   docker build --no-cache --build-arg SPT=4492882bba506f5751a1f600f3ae60275ad27e64 --label SPTAki -t sptaki .
    ```
 
  
