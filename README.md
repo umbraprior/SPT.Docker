@@ -31,19 +31,6 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    docker build --no-cache --build-arg SPT=645adcfd49dc2889ec6bf320730523ddb5f6821a --label SPTAki -t sptaki .
    ```
 
- 
-   Equivalent to release SPT-Aki-3.8.0-3951e2 (0.14.1.2.29197):
-   ```bash
-   docker build \
-      --no-cache \
-      --build-arg SPT=3951e29a340e917d158ec061ee671c4ae0f9c8ec \
-      --label SPTAki \
-      -t sptaki .
-   ```
-   Same, but in one line:
-   ```bash
-   docker build --no-cache --build-arg SPT=3951e29a340e917d158ec061ee671c4ae0f9c8ec --label SPTAki -t sptaki .
-   ```
 > [!CAUTION]
 > Windows doesn't handle the \\, use the oneliner!
 
