@@ -4,7 +4,7 @@
 
 FROM ubuntu:latest AS builder
 ARG SPT=-
-ARG SPT_BRANCH=3.8.0
+ARG SPT_BRANCH=3.8.3
 ARG NODE=20.11.1
 
 WORKDIR /opt
@@ -43,7 +43,6 @@ RUN chmod o+rwx /opt /opt/srv /opt/srv/* -R
 
 # Exposing ports
 EXPOSE 6969
-EXPOSE 6970
 
 # Specify the default command to run when the container starts
 CMD bash ./bullet.sh
