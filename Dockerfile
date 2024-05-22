@@ -15,7 +15,7 @@ RUN apt update && apt install -yq git git-lfs curl
 RUN git clone https://github.com/nvm-sh/nvm.git $HOME/.nvm || true
 RUN \. $HOME/.nvm/nvm.sh && nvm install $NODE
 ## Clone the SPT AKI repo or continue if it exist
-RUN git clone --branch $SPT_BRANCH https://dev.sp-tarkov.com/SPT-AKI/Server.git srv || true
+RUN git clone --branch $SPT_BRANCH https://dev.sp-tarkov.com/SPT/Server.git srv || true
 
 ## Check out and git-lfs (specific commit --build-arg SPT=xxxx)
 WORKDIR /opt/srv/project 
