@@ -4,7 +4,7 @@
 
 FROM ubuntu:latest AS builder
 ARG SPT=-
-ARG SPT_BRANCH=3.8.3
+ARG SPT_BRANCH=master
 ARG NODE=20.11.1
 
 WORKDIR /opt
@@ -18,7 +18,7 @@ RUN \. $HOME/.nvm/nvm.sh && nvm install $NODE
 RUN git clone --branch $SPT_BRANCH https://dev.sp-tarkov.com/SPT/Server.git srv || true
 
 ## Check out and git-lfs (specific commit --build-arg SPT=xxxx)
-WORKDIR /opt/srv/project 
+WORKDIR /opt/srv/project
 RUN git checkout $SPT || true
 RUN git-lfs fetch --all && git-lfs pull
 
