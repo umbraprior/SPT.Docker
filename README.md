@@ -1,12 +1,12 @@
 <div align=center style="text-align: center;">
-<h1>SPT-Aki - Dockerized</h1>
+<h1>SPT Server - Dockerized</h1>
 <h2>Quickly set up your personal Escape from Tarkov server in just 5 minutes..</h2>
 <h2>The Linux Container, that builds the server too</h2>
 <h4>Why? Because everyone should be able to build, and not rely on unknown builds from unknown sources.</h3>
 
 Platform independent.
 
-This fork simply removes the SIT(stayintarkov) requirements to make a generic SPT-Aki server. Huge thanks to devbence/bullet for the original project.
+This fork simply removes the SIT(stayintarkov) requirements to make a generic SPT server. Huge thanks to devbence/bullet for the original project.
 </div>
 
 ---
@@ -18,17 +18,17 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 3. `cd SPT.Docker`
 4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the [SPT/Server Gitea Page](https://dev.sp-tarkov.com/SPT/Server))
 
-   Equivalent to release SPT-Aki-3.8.3-4492882 (0.14.1.2.29197):
+   Equivalent to release SPT-3.9.0-30626 (0.14.9.30626):
    ```bash
    docker build \
       --no-cache \
-      --build-arg SPT=4492882bba506f5751a1f600f3ae60275ad27e64 \
-      --label SPTAki \
-      -t sptaki .
+      --build-arg SPT=002209a992253888d025344f831b28077a5210d1 \
+      --label SPT \
+      -t spt .
    ```
    Same, but in one line:
    ```bash
-   docker build --no-cache --build-arg SPT=4492882bba506f5751a1f600f3ae60275ad27e64 --label SPTAki -t sptaki .
+   docker build --no-cache --build-arg SPT=002209a992253888d025344f831b28077a5210d1 --label SPT -t spt .
    ```
 
 > [!CAUTION]
@@ -36,7 +36,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 
 5. Run the image once:
    ```bash
-   docker run --pull=never -v $PWD/server:/opt/server -p 6969:6969 -it --name sptaki sptaki
+   docker run --pull=never -v $PWD/server:/opt/server -p 6969:6969 -it --name spt spt
    ```
    
    - ⚠️ If you don't set the -v (volume), you won't be able to do a required step!
@@ -44,7 +44,7 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    - On **Linux** you can include `--user $(id -u):$(id -g)`, this way, file ownership will be set to the user who started the container.
 
    ```bash
-   docker run --pull=never --user $(id -u):$(id -g) -v $PWD/server:/opt/server -p 6969:6969 -it --name sptaki sptaki
+   docker run --pull=never --user $(id -u):$(id -g) -v $PWD/server:/opt/server -p 6969:6969 -it --name spt spt
    ```
 
 6. Go to your `./server` directory, delete `delete_me`, and optionally install additional mods, make config changes, etc.
@@ -54,10 +54,10 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
    
 7. Start your server (and enable auto restart):
    ```bash
-   docker start sptaki
-   docker update --restart unless-stopped sptaki
+   docker start spt
+   docker update --restart unless-stopped spt
    ```
-8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969` in Aki.Launcher
+8. ... wait a few seconds, then you can connect to `http://YOUR_IP:6969` in SPT.Launcher
 
 ## Bugs and Issues
 > [!NOTE]
