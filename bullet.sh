@@ -13,9 +13,9 @@ if [ -d "/opt/srv" ]; then
 	echo "Starting the server to generate all the required files"
 	cd /opt/server
 	chown $(id -u):$(id -g) ./* -Rf
-	nohup timeout --preserve-status 25s ./Aki.Server.exe >/dev/null 2>&1 
+	nohup timeout --preserve-status 25s ./SPT.Server.exe >/dev/null 2>&1 
 	sleep 10
-	sed -i 's/127.0.0.1/0.0.0.0/g' /opt/server/Aki_Data/Server/configs/http.json
+	sed -i 's/127.0.0.1/0.0.0.0/g' /opt/server/SPT_Data/Server/configs/http.json
 	echo "Follow the instructions to proceed!"
 	exit 0
 fi
@@ -26,7 +26,7 @@ if [ -e "/opt/server/delete_me" ]; then
 	exit 1
 fi
 
-cd /opt/server && ./Aki.Server.exe
+cd /opt/server && ./SPT.Server.exe
 
 echo "Exiting."
 exit 0
