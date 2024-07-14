@@ -18,17 +18,17 @@ This fork simply removes the SIT(stayintarkov) requirements to make a generic SP
 3. `cd SPT.Docker`
 4. Build the server for your requested version, (you can change the `--build-arg` to the full commit hash from the [SPT/Server Gitea Page](https://dev.sp-tarkov.com/SPT/Server))
 
-   Equivalent to release SPT-3.9.0-30626 (0.14.9.30626):
+   Equivalent to release SPT-3.9.1-30626 (0.14.9.30626):
    ```bash
    docker build \
       --no-cache \
-      --build-arg SPT=002209a992253888d025344f831b28077a5210d1 \
+      --build-arg SPT=22e5da9e6160dd43edaddac7713da6d753aa71b9 \
       --label SPT \
       -t spt .
    ```
    Same, but in one line:
    ```bash
-   docker build --no-cache --build-arg SPT=002209a992253888d025344f831b28077a5210d1 --label SPT -t spt .
+   docker build --no-cache --build-arg SPT=22e5da9e6160dd43edaddac7713da6d753aa71b9 --label SPT -t spt .
    ```
 
 > [!CAUTION]
