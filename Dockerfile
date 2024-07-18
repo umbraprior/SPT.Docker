@@ -4,7 +4,7 @@
 
 FROM ubuntu:latest AS builder
 ARG SPT=-
-ARG SPT_BRANCH=3.8.3
+ARG SPT_BRANCH=3.9.2
 ARG NODE=20.11.1
 
 WORKDIR /opt
