@@ -20,7 +20,7 @@ RUN git clone --branch $SPT_BRANCH https://dev.sp-tarkov.com/SPT/Server.git srv 
 ## Check out and git-lfs (specific commit --build-arg SPT=xxxx)
 WORKDIR /opt/srv/project 
 RUN git checkout $SPT || true
-RUN git-lfs fetch --all && git-lfs pull
+RUN git-lfs fetch && git-lfs pull
 
 ## Install npm dependencies and run build
 RUN \. $HOME/.nvm/nvm.sh && npm install && npm run build:release -- --arch=$([ "$(uname -m)" = "aarch64" ] && echo arm64 || echo x64) --platform=linux
